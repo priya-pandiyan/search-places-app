@@ -1,0 +1,110 @@
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    color: rgb(33, 37, 41);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+#searchBox {
+    width: 241px;
+    height: 38px;
+    padding: 6px 12px;
+    font-size: 16px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 4px;
+}
+
+#searchBox:focus {
+    border-color: #7952b3;
+    box-shadow: 0 0 0 3px rgb(121 82 179 / 25%);
+}
+
+#searchBox:disabled {
+    background-color: rgb(233, 236, 239);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid rgb(222, 226, 230);
+    text-align: left;
+}
+
+th {
+    font-weight: 700;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap; 
+}
+
+.pagination-container button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.pagination-container button:hover {
+    background-color: #ddd;
+}
+
+.pagination-container button.active {
+    background-color: #7952b3;
+    color: white;
+    border-color: #7952b3;
+}
+
+.pagination-container button.disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+    .pagination-container button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 300px) {
+    .container {
+        padding: 10px;
+    }
+    #searchBox {
+        width: 100%;
+    }
+    .items-limit {
+        flex-direction: column;
+    }
+}
